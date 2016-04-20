@@ -1,0 +1,30 @@
+<div class="container" style="margin-top:100px">
+  <form class="col-md-4 col-md-offset-4" ng-submit="login.submit($event)">
+    <h2>Log in to Todo App</h2>
+    <uib-alert ng-show="login.errorMsg" type="danger" close="login.errorMsg = ''">{{login.errorMsg}}</uib-alert>
+    <div class="form-group">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+        <input type="text" name="username" class="form-control" placeholder="Username" ng-model="login.username" required autofocus>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+        <input type="password" name="password" class="form-control" placeholder="Password" ng-model="login.password" required>
+      </div>
+    </div>
+    <!-- <div class="checkbox">
+      <label>
+        <input type="checkbox" value="remember-me" ng-model="login.rememberMe"> Remember me
+      </label>
+    </div> -->
+    <div class="form-group">
+      <button class="btn btn-lg btn-primary btn-block" type="submit"><i class="glyphicon glyphicon-log-in"></i> Login</button>
+    </div>
+    <!-- <hr>
+    <div class="form-group">
+      <a ng-href="#/reset/request">Forgot your password?</a>
+    </div> -->
+  </form>
+</div>

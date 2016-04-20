@@ -1,0 +1,34 @@
+<todo-navbar></todo-navbar>
+
+<div class="container">
+
+
+  <div class="row">
+    <!-- <pre>{{main.things | json}}</pre> -->
+
+
+    <div class="col-sm-6 col-md-4" ng-repeat="thing in main.things | orderBy:'id'">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <input type="text" ng-change="main.update(thing)" class="text-edit-input" name="title" placeholder="Title" autocomplete="off" ng-model="thing.title">
+        </div>
+        <div class="panel-body" style="min-height:80px">
+          <textarea ng-model="thing.content" ng-change="main.update(thing)" class="text-edit-input" placeholder="Content" name="content" msd-elastic></textarea>
+        </div>
+        <div class="panel-footer">
+          <button type="button" class="btn btn-default btn-xs" ng-click="main.remove(thing)">
+            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Delete
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-4">
+      <button type="button" class="btn btn-default btn-lg" ng-click="main.addNew()">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add
+      </button>
+    </div>
+  </div>
+
+</div>

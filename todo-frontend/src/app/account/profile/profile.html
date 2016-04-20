@@ -1,0 +1,31 @@
+<todo-navbar></todo-navbar>
+
+<div class="container" style="margin-top:30px">
+  <row>
+    <div class="col-lg-6 col-lg-offset-3">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"><i class="glyphicon glyphicon-user"></i> Profile</h3>
+        </div>
+        <table class="table">
+          <tr>
+            <td>Username:</td>
+            <td>{{profile.currentUser.username}}</td>
+          </tr>
+          <tr>
+            <td>E-mail:</td>
+            <td>{{profile.currentUser.email}}</td>
+          </tr>
+          <tr>
+            <td>First Name:</td>
+            <td>{{profile.currentUser.firstName}}</td>
+          </tr>
+          <tr>
+            <td>Last Name</td>
+            <td>{{profile.currentUser.lastName}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </row>
+</div>

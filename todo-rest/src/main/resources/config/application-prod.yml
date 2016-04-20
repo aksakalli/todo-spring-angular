@@ -1,0 +1,13 @@
+server:
+    port: 8080
+
+spring:
+    profiles:
+        active: dev
+    datasource:
+        dataSourceClassName: org.postgresql.Driver
+        url: jdbc:postgresql://todo-db:5432/todo
+        username: postgres
+        password: postgres
+
+naming_strategy: org.springframework.boot.orm.jpa.hibernate.SpringNamingStrategy

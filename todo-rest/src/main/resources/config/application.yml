@@ -1,0 +1,30 @@
+
+authentication:
+    oauth:
+        clientid: clientapp
+        secret: 123456
+        # Token is valid 30 minutes
+        tokenValidityInSeconds: 7200
+
+spring:
+    jpa:
+        show-sql: true
+        hibernate:
+            ddl_auto: none
+            naming_strategy: org.springframework.boot.orm.jpa.hibernate.SpringNamingStrategy
+            default_schema: public
+
+# use wisely!
+flyway:
+    locations: classpath:db/migration
+    schemas: public
+#    validateOnMigrate: false
+
+swagger:
+    title: TODO Spring Angular
+    description: REST API, which powers the single page web app and others
+    version: 0.0.1
+    termsOfServiceUrl: https://github.com/aksakalli/todo-spring-angular/
+    contact: Can Guney Aksakalli
+    license: The MIT License (MIT)
+    licenseUrl: https://github.com/aksakalli/todo-spring-angular/blob/master/LICENSE

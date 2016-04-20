@@ -1,0 +1,46 @@
+<nav class="navbar navbar-static-top navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#/">
+        <span class="glyphicon glyphicon-th-list"></span> Todo App
+      </a>
+    </div>
+
+    <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
+      <ul class="nav navbar-nav">
+        <li class="active"><a ng-href="#">Home</a></li>
+        <li><a ng-href="#">About</a></li>
+        <li><a ng-href="#">Contact</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right acme-navbar-text">
+        <li>Application was created {{ vm.relativeDate }}.</li>
+      </ul>
+    </div> -->
+
+
+    <div>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown open" uib-dropdown>
+          <a role="button" class="dropdown-toggle" uib-dropdown-toggle aria-haspopup="true" aria-expanded="true">
+            <i class="glyphicon glyphicon-user"></i> {{vm.user.username}} <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="#/profile"><i class="glyphicon glyphicon-user"></i> Profile</a>
+            </li>
+            <!-- <li>
+              <a href="#/password"><i class="glyphicon glyphicon-lock"></i> Password</a>
+            </li> -->
+            <li class="divider"></li>
+            <li>
+              <a ng-click="vm.logout()" href="#/"><i class="glyphicon glyphicon-off"></i> Log Out</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+
+  </div>
+</nav>
