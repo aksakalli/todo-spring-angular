@@ -20,19 +20,20 @@
 
     return directive;
 
-    function NavbarController(Auth, $state) {
-      var vm = this;
+  }
 
-      vm.navCollapsed = true;
-      vm.user = Auth.getCurrentUser();
-      vm.logout = logout;
+  /** @ngInject */
+  function NavbarController(Auth, $state) {
+    var vm = this;
 
-      function logout() {
-        Auth.logout();
-        $state.go('login');
-      }
+    vm.navCollapsed = true;
+    vm.user = Auth.getCurrentUser();
+    vm.logout = logout;
+
+    function logout() {
+      Auth.logout();
+      $state.go('login');
     }
-
   }
 
 })();
