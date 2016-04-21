@@ -11,7 +11,7 @@ services:
     depends_on:
       - todo-db
   todo-db:
-    image: postgres
+    image: postgres:9.4.5
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres

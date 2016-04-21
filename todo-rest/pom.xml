@@ -196,7 +196,7 @@
                 <version>0.3.9</version>
                 <configuration>
                     <imageName>todo-rest</imageName>
-                    <baseImage>java:8</baseImage>
+                    <baseImage>java:openjdk-8-jdk-alpine</baseImage>
                     <entryPoint>["java", "-jar", "/${project.build.finalName}.jar", "--spring.profiles.active=prod"]</entryPoint>
                     <resources>
                         <resource>
